@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ActiveWorksheet - Work with local and remote worksheets like ActiveRecord/ActiveResource models</title>
+  <link href="styles.css" rel='stylesheet' type="text/css">
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-column">
+        <h1>ActiveWorksheet</h1>
+        <p>Work with local and remote worksheets like ActiveRecord/ActiveResource models.</p>
+        <br>
+        <code>gem install active_worksheet</code>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/hpneo/active_worksheet" target="_blank" rel="noopener noreferrer" class="smaller">View on Github</a>
+        </p>
+      </div>
+      <div class="hero-column">
+        <img src="images/carbon.png" alt="Demo">
+      </div>
+    </div>
+  </section>
+  <section class="content">
+    <h2>What does it do?</h2>
+    <p>ActiveWorksheet reads local spreadsheet files (XLS, XLSX and CSV) and presents them as ActiveRecord/ActiveResource objects, mapping rows as records and columns and attributes.</p>
+
+    <h2>Installation</h2>
+    <p>
+      Add this line to your application's Gemfile:
+      <pre>gem 'active_worksheet'</pre>
+      And then execute:
+      <pre>$ bundle</pre>
+      Or install it yourself as:
+      <pre>$ gem install active_worksheet</pre>
+    </p>
+
+    <h2>Usage</h2>
+
+    <p>Having the following CSV file:</p>
+
+    <pre>
+id,first_name,last_name,email,company
+1,Brendis,MacCahee,bmaccahee0@privacy.gov.au,Klocko and Sons
+2,Abbe,John,ajohn1@ibm.com,"Mayer, Weimann and Stark"
+3,Buffy,Schiersch,bschiersch2@chronoengine.com,"Gusikowski, Schmidt and Watsica"
+4,Flore,Aberhart,faberhart3@boston.com,Beatty Group</pre>
+
+    <p>It can be represented as an object using <code>active_worksheet</code>:</p>
+    <pre style="line-height: 18px;white-space: pre;"><div><span style="color: #c586c0;">class</span> <span style="color: #4ec9b0;">ImportedAccount &lt; ActiveWorksheet::Base</span></div><div>  <span style="color: #569cd6;">self</span>.<span style="color: #9cdcfe;">source</span> = <span style="color: #ce9178;">"./accounts.csv"</span></div><div><span style="color: #c586c0;">end</span></div></pre>
+
+    <p>The <code>ImportedAccount</code> class will read the file as a spreadsheet and treat the first row as the collection's headers, where each column is an attribute name.</p>
+    <pre style="white-space: pre;"><div><span style="color: #4ec9b0;">ImportedAccount</span>.count</div><div><span style="color: #6a9955;"># =&gt; 4</span></div><br><div><span style="color: #4ec9b0;">ImportedAccount</span>.first</div><div><span style="color: #6a9955;"># =&gt; #&lt;ImportedAccount id=1, first_name="Brendis", last_name="MacCahee", email="bmaccahee0@privacy.gov.au", company="Klocko and Sons"&gt;</span></div></pre>
+  </section>
+</body>
+</html>
