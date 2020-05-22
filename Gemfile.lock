@@ -12,7 +12,7 @@ GEM
       activemodel (> 5.x)
       activesupport (> 5.x)
       builder (~> 3.1)
-    activeresource (5.1.0)
+    activeresource (5.1.1)
       activemodel (>= 5.0, < 7)
       activemodel-serializers-xml (~> 1.0)
       activesupport (>= 5.0, < 7)
@@ -30,7 +30,7 @@ GEM
       nokogiri (~> 1.8, >= 1.8.2)
       rubyzip (~> 1.2, >= 1.2.1)
     builder (3.2.4)
-    concurrent-ruby (1.1.5)
+    concurrent-ruby (1.1.6)
     declarative (0.0.10)
     declarative-option (0.1.0)
     diff-lcs (1.3)
@@ -65,7 +65,7 @@ GEM
     mimemagic (0.3.4)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.14.0)
+    minitest (5.14.1)
     multi_json (1.14.1)
     multipart-post (2.1.1)
     nokogiri (1.10.8)
@@ -102,7 +102,7 @@ GEM
     spreadsheet (1.2.6)
       ruby-ole (>= 1.0)
     thread_safe (0.3.6)
-    tzinfo (1.2.6)
+    tzinfo (1.2.7)
       thread_safe (~> 0.1)
     uber (0.1.0)
     workbook (0.8.1)
@@ -111,14 +111,14 @@ GEM
       nokogiri (~> 1.8)
       rchardet (~> 1.3)
       spreadsheet (~> 1.1)
-    zeitwerk (2.2.2)
+    zeitwerk (2.3.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   active_worksheet!
-  activeresource (= 5.1.0)
+  activeresource (= 5.1.1)
   activesupport (= 6.0.2.1)
   bundler (~> 2.0)
   google_drive (= 3.0.4)
