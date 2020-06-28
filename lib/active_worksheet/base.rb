@@ -34,7 +34,7 @@ module ActiveWorksheet
 
       def adapter
         if is_source_local?
-          ActiveWorksheet::Adapters::FileAdapter.new(source: source)
+          ActiveWorksheet::Adapters::FileAdapter.new(source: File.expand_path(source))
         else
           ActiveWorksheet::Adapters::GoogleSheetsAdapter.new(
             source: source,
@@ -44,7 +44,7 @@ module ActiveWorksheet
       end
 
       def is_source_local?
-        self.source.is_a?(File) || File.exists?(self.source)
+        self.source.is_a?(File) || File.exists?(File.expand_path(self.source))
       end
 
       def is_source_remote?
