@@ -31,8 +31,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 13.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_dependency "activesupport", "6.0.2.1"
-  spec.add_dependency "activeresource", "5.1.0"
+  spec.add_dependency "activesupport", "6.0.3.1"
+  spec.add_dependency "activeresource", "5.1.1"
   spec.add_dependency "workbook", "0.8.1"
   spec.add_dependency "google_drive", "3.0.4"
 end
