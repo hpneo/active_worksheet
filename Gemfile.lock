@@ -2,8 +2,8 @@ PATH
   remote: .
   specs:
     active_worksheet (0.1.2)
-      activeresource (= 5.1.1)
-      activesupport (= 6.0.3.1)
+      activeresource (~> 5.0)
+      activesupport (~> 6.0)
       google_drive (= 3.0.4)
       workbook (= 0.8.1)
 
